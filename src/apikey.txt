@@ -1,0 +1,47 @@
+a0e372382be94ea492277dc9bfdddcd2
+
+https://newsapi.org/v2/everything?q=WWE%20Raw&from=2024-01-01&sortBy=popularity&apiKey=a0e372382be94ea492277dc9bfdddcd2
+
+https://newsapi.org/v2/everything?q=WWE&apiKey=a0e372382be94ea492277dc9bfdddcd2
+
+
+
+
+{/* <Route 
+              exact
+              path="/entertainment"
+              element={<News 
+                key="entertainment"
+                country="in" category="entertainment"
+              pageSize={9}/>}
+              ></Route>
+            <Route 
+              exact
+              path="/health"
+              element={<News 
+                key="health"
+                country="in" category="health" pageSize={9}/>}
+              ></Route>
+            <Route 
+              exact
+              path="/science"
+              element={<News 
+                key="science"
+                country="in" category="science" pageSize={9}/>}
+              ></Route>
+            <Route 
+              exact
+              path="/sports"
+              element={
+                <News 
+                key="science"
+                country="in" category="sports" pageSize={9}
+                />
+              }
+              ></Route>
+            <Route 
+              exact
+              path="/technology"
+              element={<News
+                key="technology"
+              country="in" category="technology" pageSize={9}/>}></Route> */}
