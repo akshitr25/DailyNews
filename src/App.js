@@ -58,13 +58,6 @@ export default class App extends Component {
               country="in" category="technology" 
               pageSize={9}/>}
               />
-              <Route 
-              exact
-              path="/WWE/*"
-              element={<News 
-              country="us"
-              pageSize={9}/>}
-              />
             </Routes>
         </BrowserRouter>
       </div>

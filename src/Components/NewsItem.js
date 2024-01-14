@@ -9,8 +9,8 @@ export default class NewsItem extends Component {
         <a href={newsUrl?newsUrl:"https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg"} target="_blank" rel="noreferrer">
           <img src={imgUrl?imgUrl:"https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg"} className="card-img-top" alt={title}/>
           </a>
-          <span class="position-absolute top-0 translate-middle badge rounded-pill bg-info" style={{right: '0%', zIndex: "1"}}> 
-    {author}
+          <span class="position-absolute top-0 translate-middle badge rounded-pill bg-warning" style={{right: '0%', zIndex: "1"}}> 
+    {source}
   </span>
   <div className="card-body">
   <h5 className="card-title flex">
