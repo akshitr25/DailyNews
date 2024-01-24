@@ -12,7 +12,7 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='bg-secondary'>
         <BrowserRouter>
         <Navbar/>
         <LoadingBar
@@ -26,7 +26,7 @@ export default class App extends Component {
               path="/*"
               element={<News setProgress={this.setProgress}
                 key="general"
-                country="in" category="general" pageSize={9}/>}
+                country="in" category="general" pageSize={15}/>}
             />
             <Route 
               exact
@@ -34,7 +34,7 @@ export default class App extends Component {
               element={<News setProgress={this.setProgress}
               key="business"
               country="in" category="business" 
-              pageSize={9}/>}
+              pageSize={15}/>}
               />
               <Route 
               exact
@@ -42,7 +42,7 @@ export default class App extends Component {
               element={<News setProgress={this.setProgress}
               key="health"
               country="in" category="health" 
-              pageSize={9}/>}
+              pageSize={15}/>}
               />
               <Route 
               exact
@@ -50,7 +50,7 @@ export default class App extends Component {
               element={<News setProgress={this.setProgress} 
               key="science"
               country="in" category="science" 
-              pageSize={9}/>}
+              pageSize={15}/>}
               />
               <Route 
               exact
@@ -58,7 +58,7 @@ export default class App extends Component {
               element={<News setProgress={this.setProgress} 
               key="sports"
               country="in" category="sports" 
-              pageSize={9}/>}
+              pageSize={15}/>}
               />
               <Route 
               exact
@@ -66,7 +66,7 @@ export default class App extends Component {
               element={<News setProgress={this.setProgress}
               key="technology"
               country="in" category="technology" 
-              pageSize={9}/>}
+              pageSize={15}/>}
               />
             </Routes>
         </BrowserRouter>

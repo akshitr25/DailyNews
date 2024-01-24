@@ -5,7 +5,7 @@ export default class NewsItem extends Component {
     let {title, desc, imgUrl, newsUrl, author, date, source}=this.props;
     return (
       <div>
-        <div className="card" style={{width: "18rem"}}>
+        <div className="card text-white bg-dark mb-3" style={{width: "18rem"}}>
         <a href={newsUrl?newsUrl:"https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg"} target="_blank" rel="noreferrer">
           <img src={imgUrl?imgUrl:"https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg"} className="card-img-top" alt={title}/>
           </a>
@@ -18,7 +18,7 @@ export default class NewsItem extends Component {
   </h5>
     <p className="card-text">{desc}</p>
     <a href={newsUrl?newsUrl:"https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg"} target="_blank" className="btn btn-primary" rel="noreferrer">Read More...</a>
-    <p class="card-text"><small class="text-muted">By {author!=null?author:"Unknown"} on {new Date(date).toGMTString()}</small></p>
+    <p class="card-text"><small class="">By {author!=null?author:"Unknown"} on {new Date(date).toGMTString()}</small></p>
   </div>
 </div>
       </div>

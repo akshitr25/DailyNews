@@ -8,7 +8,7 @@ export class News extends Component {
   articles=[];
   static defaultProps={
     country: "in",
-    pageSize: 9,
+    pageSize: 15,
     category: "general",
     query: "",
     apiKey: "0c00285904694c64b64136af0de939fb"
@@ -90,12 +90,12 @@ export class News extends Component {
   
   render() {
     return (
-      <div className="container my-4">
-        <h1 className="text-center" style={{margin: "35px 0px"}}>Daily News - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
+      <div className="container my-4 bg-secondary">
+        <h1 className="text-center text-white" style={{margin: "35px 0px"}}>Daily News - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
         {this.state.loading && <Spinner></Spinner>}
         {!this.state.loading &&
         <>
-        <p>Articles available: {this.state.totalResults}. </p>
+        <p className="text-white">Articles available: {this.state.totalResults}. </p>
         {/* Page {this.state.page} out of {Math.ceil(this.state.totalResults/(this.props.pageSize))}.</p>
         <p>{this.props.pageSize} Records per Page.</p> */}
         {/* <div class="d-flex justify-content-between">
@@ -120,8 +120,8 @@ export class News extends Component {
             return (
                 <div className="col-md-3 mx-4 my-4" key={element.url}>
                   <NewsItem
-                    title={element.title}
-                    desc={element.description}
+                    title={element.title ? element.title : ""}
+                    desc={element.description ? element.description : ""}
                     imgUrl={element.urlToImage}
                     newsUrl={element.url}
                     author={element.author}

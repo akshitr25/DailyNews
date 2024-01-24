@@ -5,8 +5,8 @@ export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <Link className="navbar-brand" to="#">Navbar</Link>
+        <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
+  <Link className="navbar-brand text-warning fw-bold" to="#">Today's News</Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -14,22 +14,22 @@ export default class Navbar extends Component {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
+        <Link className="nav-link text-white" to="/">Home<span className="sr-only">(current)</span></Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/business">Business</Link>
+        <Link className="nav-link text-white" to="/business">Business</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/health">Health</Link>
+        <Link className="nav-link text-white" to="/health">Health</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/science">Science</Link>
+        <Link className="nav-link text-white" to="/science">Science</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/sports">Sports</Link>
+        <Link className="nav-link text-white" to="/sports">Sports</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/technology">Technology</Link>
+        <Link className="nav-link text-white" to="/technology">Technology</Link>
       </li>
     </ul>
     <form className="form-inline my-2 my-lg-0">
