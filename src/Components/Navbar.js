@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Navbar=()=>{ //function based component
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
-  <Link className="navbar-brand text-warning fw-bold" to="#">Today's News</Link>
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-info">
+  <Link className="navbar-brand text-warning fw-bold" to="/wwe">WWE</Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>

@@ -16,7 +16,11 @@ const News=(props)=>{
   const updateNews=async ()=>{
     props.setProgress(0);
     setLoading(true);
-    let url=`https://newsapi.org/v2/top-headlines?&page=${page}&apiKey=${props.apiKey}&pageSize=${props.pageSize}&category=${props.category}&country=${props.country}`;
+    let url;
+    if(props.query==='wwe')   
+      url=`https://newsapi.org/v2/everything?&page=${page}&apiKey=${props.apiKey}&pageSize=${props.pageSize}&q=${props.query}&from=2024-01-27&sortBy=publishedAt`;
+    else
+      url=`https://newsapi.org/v2/top-headlines?&page=${page}&apiKey=${props.apiKey}&pageSize=${props.pageSize}&category=${props.category}&country=${props.country}`;
     let data=await fetch(url);
     props.setProgress(50);
     let parsedData=await data.json();
@@ -50,8 +54,12 @@ const News=(props)=>{
     //   return false;
     // }
     props.setProgress(0);
+    let url;
+    if(props.query==='wwe')
+      url=`https://newsapi.org/v2/everything?&page=${page+1}&apiKey=${props.apiKey}&pageSize=${props.pageSize}&q=${props.query}&from=2024-01-27&sortBy=publishedAt`;
+    else
+      url=`https://newsapi.org/v2/top-headlines?&page=${page+1}&apiKey=${props.apiKey}&pageSize=${props.pageSize}&category=${props.category}&country=${props.country}`;
     setPage(page+1);
-    let url=`https://newsapi.org/v2/top-headlines?&page=${page}&apiKey=${props.apiKey}&pageSize=${props.pageSize}&category=${props.category}&country=${props.country}`;
     setLoading(true);
     console.log(page);
     let data=await fetch(url);
@@ -67,7 +75,7 @@ const News=(props)=>{
   
     return (
       <div className="container my-4 bg-secondary">
-        <h1 className="text-center text-white" style={{margin: "35px 0px"}}>Daily News - Top {capitalizeFirstLetter(props.category)} Headlines</h1>
+        <h1 className="text-center text-white" style={{margin: "25px 0px", marginTop: "55px"}}>Daily News - Top {capitalizeFirstLetter(props.category)} Headlines</h1>
         {loading && <Spinner></Spinner>}
         {!loading &&
         <>
